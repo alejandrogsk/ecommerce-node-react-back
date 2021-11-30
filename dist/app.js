@@ -28,9 +28,5 @@ app.use("/public", express_1.default.static(path_1.default.join(__dirname + "./s
 app.use("/api/auth", auth_1.default);
 app.use("/api", products_1.default);
 app.use("/api", payment_1.default);
-app.use("/api/prueba", function (req, res) {
-    console.log("funciona");
-    res.json('FUNCIONA');
-});
 exports.default = app;
 //# sourceMappingURL=app.js.map

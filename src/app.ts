@@ -31,9 +31,4 @@ app.use("/api/auth", authRoutes);
 app.use("/api", produtRoutes);
 app.use("/api", paymentRoutes)
 
-app.use("/api/prueba", function(req, res){
-    console.log("funciona")
-    res.json('FUNCIONA');
-})
-
 export default app;
