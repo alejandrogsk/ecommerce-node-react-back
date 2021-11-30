@@ -1,17 +1,12 @@
 import express from "express";
 import morgan from "morgan";
 import path from "path";
-const cors = require('cors')
-
-
 import authRoutes from "./routes/auth";
 import produtRoutes from "./routes/products";
 import paymentRoutes from "./routes/payment";
 
 const app = express();
-
-
-
+const cors = require('cors')
 
 //Create the port
 app.set("port", process.env.PORT || 4000);
@@ -35,5 +30,10 @@ app.use("/public", express.static(path.join(__dirname + "./storage")));
 app.use("/api/auth", authRoutes);
 app.use("/api", produtRoutes);
 app.use("/api", paymentRoutes)
+
+app.use("/api/prueba", function(req, res){
+    console.log("funciona")
+    res.json('FUNCIONA');
+})
 
 export default app;
