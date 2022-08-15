@@ -8,7 +8,6 @@ import config from "./config";
 			useNewUrlParser: true,
 			useCreateIndex: true,
 		};
-
 		const db = await mongoose.connect(config.DB.URI, mongooseOptions);
 		console.log("database is connected to: ", db.connection.name);
 	} catch (error) {
